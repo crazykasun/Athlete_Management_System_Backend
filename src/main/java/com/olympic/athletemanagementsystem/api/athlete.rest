@@ -1,0 +1,92 @@
+###add athlete with events
+POST localhost:8080/api/athletes
+Content-Type: application/json
+
+{
+    "firstName": "Mike",
+    "lastName": "Tyson",
+    "country": "America",
+    "image": "",
+    "dob": "1975-10-01",
+    "gender": {
+        "id": 1
+    },
+    "events": [
+        {
+            "name": "Heavy Weight Men",
+            "type": "Male",
+            "date": "2021-11-11",
+            "time": "21:00:00",
+            "location": "Indoor St 1",
+            "enabled": true,
+            "eventCategory": {
+                "categoryId": 3
+            }
+        },
+        {
+            "name": "Open Boxing Men",
+            "type": "Male",
+            "date": "2021-11-13",
+            "time": "10:00:00",
+            "location": "Indoor St 1",
+            "enabled": true,
+            "eventCategory": {
+                "categoryId": 3
+            }
+        }
+    ]
+}
+
+###add athlete
+POST localhost:8080/api/athletes
+Content-Type: application/json
+
+{
+  "firstName": "Susanthika",
+  "lastName": "Jayasingha",
+  "country": "Sri Lanka",
+  "image": "",
+  "dob": "1975-10-01",
+  "gender": {
+    "id": 2
+  }
+}
+
+###Update athlete
+PUT localhost:8080/api/athletes/2
+Content-Type: application/json
+
+{
+  "athleteId": 2,
+  "firstName": "Susanthika",
+  "lastName": "Jayasingha",
+  "country": "Sri Lanka",
+  "image": "",
+  "dob": "1975-10-01",
+  "gender": {
+    "id": 2,
+    "type": "Female"
+  }
+}
+
+###Get athlete by gender
+GET localhost:8080/api/athletes/search/gender/2?page=0&limit=10&sortBy=firstName&orderBy=desc
+
+###Get athlete by event enabled
+GET localhost:8080/api/athletes/event?page=0&limit=10&sortBy=firstName&orderBy=desc&enabled=true
+
+###search athlete by name
+GET localhost:8080/api/athletes/search/names?firstName=su&lastName=&page=0&limit=10&sortBy=firstName&orderBy=desc
+
+###get athlete image by athleteId
+GET localhost:8080/api/athletes/getImage/2
+
+###add athlete event
+POST localhost:8080/api/athletes/events
+Content-Type: application/json
+
+{
+  "athleteId": 2,
+  "eventId": 4
+}
+

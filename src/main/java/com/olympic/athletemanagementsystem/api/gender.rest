@@ -1,0 +1,22 @@
+###save gender
+POST localhost:8080/api/gender
+Content-Type: application/json
+
+{
+  "type": "Not Interested"
+}
+
+###get all genders
+GET localhost:8080/api/gender
+
+###update gender by id
+PUT localhost:8080/api/gender/4
+Content-Type: application/json
+
+{
+  "id": 4,
+  "type": "Not Interested updated"
+}
+
+###delete gender by id
+DELETE localhost:8080/api/gender/4

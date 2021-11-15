@@ -1,0 +1,28 @@
+###add event
+POST localhost:8080/api/events
+Content-Type: application/json
+
+{
+    "name": "200m Female",
+        "type": "Female",
+        "date": "2021-12-01",
+        "time": "20:00:00",
+        "location": "Indoor Stadium 1",
+        "enabled": true,
+        "eventCategory": {
+            "categoryId": 1
+        }
+}
+
+###get all events that enable
+GET localhost:8080/api/events?page=0&limit=10&sortBy=date&orderBy=asc&enabled=true
+
+###update event
+PUT localhost:8080/api/events/2
+Content-Type: application/json
+
+{
+      "eventId": 2,
+      "enabled": false
+}
+
