@@ -1,4 +1,4 @@
-##Backend
+## Backend
 1. Navigate to 'Athlete_Management_System_Backend' folder
 2. Open 'application.properties' file. (src/main/resources)
 3. Configure the database using the file.
@@ -9,7 +9,7 @@
 4. Open 'AthleteManagementSystemApplication' file. (src/main/java/com/olympic/athletemanagementsystem)
 5. Run Java file
 
-##Frontend
+## Frontend
 1. Navigate to 'Athlete_Management_System_Frontend' folder
 2. Run script 'npm install' in terminal
 3. Then run 'npm start'
